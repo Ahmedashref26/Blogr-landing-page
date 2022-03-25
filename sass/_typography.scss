@@ -1,0 +1,100 @@
+.heading-primary {
+  font-size: 5.6rem;
+  font-weight: 700;
+  color: $color-white;
+  letter-spacing: 1px;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 2px 5px #4b586233;
+  margin-top: 8rem;
+}
+
+.heading-secondary {
+  font-size: 3.2rem;
+  color: $color-primary-dark;
+  line-height: 1;
+  text-align: center;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 3rem;
+  }
+
+  &--white {
+    color: $color-white;
+    text-align: left;
+
+    @media only screen and (max-width: $bp-medium) {
+      text-align: center;
+    }
+  }
+}
+
+.heading-tertiary {
+  font-size: 2.4rem;
+  color: $color-primary-dark;
+  line-height: 1;
+}
+
+.sub-heading {
+  text-align: center;
+  color: $color-white;
+  font-size: 2.1rem;
+  text-shadow: 0 1px 3px rgb(75 88 98 / 20%);
+  margin-top: 2rem;
+}
+
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+  font-family: $font-display;
+  color: $color-white;
+  padding: 1rem 2rem;
+  transition: all 0.2s;
+  border-radius: 2.5rem;
+
+  &--fill {
+    background-color: $color-white;
+    color: $color-primary;
+    padding: 1rem 3rem;
+    font-weight: 700;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 1rem 2rem;
+    }
+
+    &:hover {
+      background-color: $color-primary-light;
+      color: $color-white;
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    color: $color-white;
+    border: 1px solid $color-white;
+    padding: 1rem 3rem;
+    font-weight: 700;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 1rem 2rem;
+    }
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-primary;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(#000, 0.2);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
+  }
+}

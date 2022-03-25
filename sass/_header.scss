@@ -1,0 +1,246 @@
+.header {
+  height: 80vh;
+  background-image: url(../images/bg-pattern-intro-desktop.svg),
+    linear-gradient(90deg, $color-gradient-red-light, $color-gradient-red);
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: 30% 53%;
+  border-radius: 0 0 0 10rem;
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 4rem;
+  }
+
+  .nav {
+    margin: 0px 14rem;
+    padding: 4rem 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $bp-large) {
+      padding: 4rem 0;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      margin: 0;
+      padding: 0;
+    }
+
+    &__menu {
+      display: none;
+      width: 4.5rem;
+      height: 3px;
+      background-color: $color-white;
+      position: relative;
+      border-radius: 1rem;
+      transition: all 0.2s;
+
+      &::after,
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        background-color: $color-white;
+        width: 4.5rem;
+        height: 3px;
+        border-radius: 1rem;
+        transition: all 0.2s ease-in;
+      }
+
+      &::after {
+        top: -7px;
+      }
+
+      &::before {
+        top: 7px;
+      }
+
+      &--active {
+        display: block;
+        visibility: hidden;
+
+        &::after,
+        &::before {
+          visibility: visible;
+          top: 0;
+        }
+
+        &::after {
+          transform: rotate(-135deg);
+        }
+        &::before {
+          transform: rotate(135deg);
+        }
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        display: block;
+        margin-left: auto;
+      }
+    }
+
+    &__cta {
+      @media only screen and (max-width: $bp-small) {
+        display: none;
+      }
+    }
+
+    &__links {
+      list-style: none;
+      display: flex;
+      gap: 3rem;
+      margin: 0 auto 0 8rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin: 0 auto 0 4rem;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        display: none;
+      }
+    }
+
+    &__link {
+      text-decoration: none;
+      display: inline-block;
+      color: $color-white;
+      font-family: $font-display;
+      font-weight: 500;
+      position: relative;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 3px;
+        width: 0;
+        background-color: $color-white;
+        height: 0.2rem;
+        transition: all 0.5s;
+      }
+
+      &__icon {
+        img {
+          margin-left: 0.2rem;
+          transition: all 0.3s;
+        }
+
+        &-up img {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .menu-mobile {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu-mobile--active {
+      display: block;
+      width: 90%;
+      background-color: white;
+      padding: 3rem;
+      position: absolute;
+      top: 9rem;
+      left: 0;
+      margin: 3rem;
+      text-align: center;
+      font-size: 2rem;
+      border-radius: 1rem;
+
+      .nav__links {
+        display: block;
+        margin: 0;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $color-blue;
+
+        .nav__link {
+          color: $color-blue-dark;
+
+          &__icon {
+            color: $color-primary;
+          }
+        }
+
+        .nav__drop-down {
+          position: relative;
+          top: 0;
+          left: 0;
+          background-color: $color-blue;
+          width: 100%;
+
+          &--link {
+            display: inline-block;
+            padding: 0.5rem;
+          }
+        }
+      }
+
+      .nav__cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding-top: 2rem;
+
+        .btn--text {
+          color: $color-blue-dark;
+        }
+        .btn--fill {
+          background-image: linear-gradient(
+            90deg,
+            $color-gradient-red-light,
+            $color-gradient-red
+          );
+          color: $color-white;
+          padding: 1rem 3.2rem;
+        }
+      }
+    }
+
+    &__item {
+      position: relative;
+    }
+
+    &__drop-down {
+      display: none;
+      position: absolute;
+      top: 5rem;
+      left: -2rem;
+      background-color: $color-white;
+      padding: 2.4rem;
+      border-radius: 1rem;
+      width: 14rem;
+
+      &--active {
+        display: block;
+      }
+
+      &--links {
+        list-style: none;
+      }
+      &--link {
+        color: $color-blue-black;
+        text-decoration: none;
+
+        &:hover {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  &__cta {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+
+.nav__item:hover .nav__link::before {
+  width: 80%;
+}

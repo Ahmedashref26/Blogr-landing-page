@@ -1,0 +1,167 @@
+.feature {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10%;
+  margin-top: -12rem;
+
+  @media only screen and (max-width: $bp-large) {
+    margin-top: 2.8rem;
+    margin-bottom: 10rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column-reverse;
+  }
+
+  &__text {
+    flex: 1 0 40%;
+    padding-left: 12rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      padding-left: 6rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 6rem 12rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      text-align: center;
+      padding: 6rem 4rem;
+    }
+
+    &-p {
+      color: $color-blue-dark;
+    }
+  }
+
+  &__image {
+    @media only screen and (max-width: $bp-medium) {
+      text-align: center;
+    }
+    img {
+      width: 135%;
+
+      @media only screen and (max-width: $bp-largest) {
+        width: 100%;
+      }
+
+      @media only screen and (max-width: $bp-medium) {
+        width: 50%;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        width: 90%;
+      }
+    }
+  }
+}
+
+.state {
+  background-image: url(../images/bg-pattern-circles.svg),
+    linear-gradient(to right, $color-gradient-blue, $color-gradient-blue-dark);
+  background-position: -42% 80%;
+  background-repeat: no-repeat;
+
+  height: 25vw;
+  border-radius: 0 10rem;
+
+  display: flex;
+  align-items: center;
+  gap: 10%;
+  padding: 0 8rem;
+  margin: 6rem 0;
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+    padding: 0 4rem 6rem;
+    height: auto;
+  }
+
+  &__img {
+    flex-basis: 45%;
+
+    @media only screen and (max-width: $bp-largest) {
+      width: 40rem;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      width: 60%;
+      margin-top: -14rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      width: 75%;
+      margin-top: -8rem;
+    }
+  }
+
+  &__text {
+    flex-basis: 37%;
+
+    @media only screen and (max-width: $bp-large) {
+      flex-basis: 45%;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      text-align: center;
+    }
+
+    &-p {
+      color: $color-white;
+    }
+  }
+}
+
+.feature-2 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 8rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
+
+  &__text {
+    flex: 1 0 50%;
+    padding-right: 25rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      padding-right: 12rem;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      padding: 6rem 12rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      text-align: center;
+      padding: 6rem 4rem;
+    }
+
+    &-p {
+      color: $color-blue-dark;
+    }
+  }
+
+  &__image {
+    @media only screen and (max-width: $bp-medium) {
+      text-align: center;
+    }
+    img {
+      width: 120%;
+      transform: translateX(-26rem);
+
+      @media only screen and (max-width: $bp-largest) {
+        width: 100%;
+        transform: translateX(0);
+      }
+
+      @media only screen and (max-width: $bp-medium) {
+        width: 50%;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        width: 90%;
+      }
+    }
+  }
+}

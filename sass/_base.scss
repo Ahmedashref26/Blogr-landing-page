@@ -1,0 +1,84 @@
+// Variables
+
+// Colors
+
+// Primary
+
+//- Light red (CTA text)
+$color-primary: hsl(356, 100%, 66%);
+//- Very light red (CTA hover background)
+$color-primary-light: hsl(355, 100%, 74%);
+//- Very dark blue (headings)
+$color-primary-dark: hsl(208, 49%, 24%);
+
+//# Neutral
+
+//- White (text)
+$color-white: hsl(0, 0%, 100%);
+//- Grayish blue (footer text)
+$color-blue: hsl(240, 2%, 79%);
+//- Very dark grayish blue (body copy)
+$color-blue-dark: hsl(207, 13%, 34%);
+//- Very dark black blue (footer background)
+$color-blue-black: hsl(240, 10%, 16%);
+
+//# Gradient
+
+//Background gradient - Intro/CTA mobile nav:
+
+//- Very light red
+$color-gradient-red-light: hsl(13, 100%, 72%);
+//- Light red
+$color-gradient-red: hsl(353, 100%, 62%);
+
+//Background gradient - body:
+
+//- Very dark gray blue
+$color-gradient-blue: hsl(237, 17%, 21%);
+//- Very dark desaturated blue
+$color-gradient-blue-dark: hsl(237, 23%, 32%);
+
+// Typography
+
+// FONT VARIABLES
+$font-primary: 'Overpass', sans-serif;
+$font-display: 'Ubuntu', sans-serif;
+//- Family: [Overpass](https://fonts.google.com/specimen/Overpass?preview.text_type=custom)
+//- Weights: 300, 600
+
+//- Family: [Ubuntu](https://fonts.google.com/specimen/Ubuntu?preview.text_type=custom)
+//- Weights: 400, 500, 700
+
+// Break points
+$bp-largest: 75em;
+$bp-large: 62.5em;
+$bp-medium: 50em;
+$bp-small: 37.5em;
+
+//--------------------
+// ----- Global
+//--------------------
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-blue-dark;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
